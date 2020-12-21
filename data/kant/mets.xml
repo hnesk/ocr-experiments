@@ -5,6 +5,15 @@
       <mets:name>DFG-Koordinierungsprojekt zur Weiterentwicklung von Verfahren der Optical Character Recognition (OCR-D)</mets:name>
       <mets:note>OCR-D</mets:note>
     </mets:agent>
+    <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="OTHER" OTHERROLE="preprocessing/optimization/binarization">
+      <mets:name>ocrd-anybaseocr-binarize v1.1.0</mets:name>
+    </mets:agent>
+    <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="OTHER" OTHERROLE="preprocessing/optimization/cropping">
+      <mets:name>ocrd-anybaseocr-crop v1.1.0</mets:name>
+    </mets:agent>
+    <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="OTHER" OTHERROLE="layout/segmentation/region">
+      <mets:name>ocrd-cis-ocropy-segment v0.1.5</mets:name>
+    </mets:agent>
   </mets:metsHdr>
   <mets:dmdSec ID="dmdSec_0001">
     <mets:mdWrap MDTYPE="MODS">
@@ -91,24 +100,6 @@
   </mets:amdSec>
   <mets:fileSec>
     <mets:fileGrp USE="OCR-D-IMG">
-      <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0001">
-        <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0001.tif" OTHERLOCTYPE="FILE"/>
-      </mets:file>
-      <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0002">
-        <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0002.tif" OTHERLOCTYPE="FILE"/>
-      </mets:file>
-      <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0003">
-        <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0003.tif" OTHERLOCTYPE="FILE"/>
-      </mets:file>
-      <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0004">
-        <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0004.tif" OTHERLOCTYPE="FILE"/>
-      </mets:file>
-      <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0005">
-        <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0005.tif" OTHERLOCTYPE="FILE"/>
-      </mets:file>
-      <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0006">
-        <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0006.tif" OTHERLOCTYPE="FILE"/>
-      </mets:file>
       <mets:file MIMETYPE="image/tif" ID="OCR-D-IMG_0007">
         <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0007.tif" OTHERLOCTYPE="FILE"/>
       </mets:file>
@@ -152,6 +143,264 @@
         <mets:FLocat LOCTYPE="OTHER" xlink:href="OCR-D-IMG/OCR-D-IMG_0020.tif" OTHERLOCTYPE="FILE"/>
       </mets:file>
     </mets:fileGrp>
+    <mets:fileGrp USE="OCR-D-IMG-BIN">
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0007-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0007-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0007">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0007.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0008-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0008-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0008">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0008.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0009-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0009-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0009">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0009.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0010-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0010-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0010">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0010.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0011-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0011-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0011">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0011.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0012-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0012-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0012">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0012.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0013-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0013-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0013">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0013.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0014-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0014-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0014">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0014.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0015-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0015-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0015">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0015.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0016-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0016-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0016">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0016.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0017-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0017-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0017">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0017.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0018-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0018-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0018">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0018.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0019-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0019-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0019">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0019.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN_0020-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0020-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN_0020">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0020.xml"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="OCR-D-IMG-BIN-CROP">
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0007-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0007-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0007">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0007.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0008-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0008-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0008">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0008.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0009-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0009-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0009">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0009.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0010-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0010-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0010">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0010.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0011-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0011-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0011">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0011.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0012-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0012-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0012">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0012.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0013-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0013-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0013">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0013.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0014-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0014-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0014">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0014.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0015-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0015-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0015">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0015.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0016-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0016-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0016">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0016.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0017-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0017-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0017">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0017.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0018-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0018-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0018">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0018.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0019-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0019-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0019">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0019.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-IMG-BIN-CROP_0020-IMG">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0020-IMG.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-IMG-BIN-CROP_0020">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-IMG-BIN-CROP/OCR-D-IMG-BIN-CROP_0020.xml"/>
+      </mets:file>
+    </mets:fileGrp>
+    <mets:fileGrp USE="OCR-D-SEG-LINE">
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0007">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0007.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0008">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0008.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0009">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0009.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0010">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0010.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0011">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0011.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0012">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0012.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0013">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0013.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0014">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0014.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0015">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0015.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0016">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0016.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0017">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0017.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0018">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0018.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0019">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0019.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="application/vnd.prima.page+xml" ID="OCR-D-SEG-LINE_0020">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0020.xml"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0007.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0007.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0008.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0008.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0009.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0009.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0010.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0010.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0011.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0011.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0012.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0012.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0013.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0013.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0014.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0014.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0015.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0015.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0016.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0016.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0017.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0017.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0018.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0018.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0019.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0019.IMG-CLIP.png"/>
+      </mets:file>
+      <mets:file MIMETYPE="image/png" ID="OCR-D-SEG-LINE_0020.IMG-CLIP">
+        <mets:FLocat LOCTYPE="OTHER" OTHERLOCTYPE="FILE" xlink:href="OCR-D-SEG-LINE/OCR-D-SEG-LINE_0020.IMG-CLIP.png"/>
+      </mets:file>
+    </mets:fileGrp>
   </mets:fileSec>
   <mets:structMap TYPE="LOGICAL">
     <mets:div TYPE="Monograph" DMDID="dmdSec_0001" ADMID="amdSec_0001" ID="loc_0001">
@@ -160,65 +409,131 @@
   </mets:structMap>
   <mets:structMap TYPE="PHYSICAL">
     <mets:div TYPE="physSequence" ID="phys_0000">
-      <mets:div TYPE="page" ORDER="1" ID="phys_0001">
-        <mets:fptr FILEID="OCR-D-IMG_0001"/>
-      </mets:div>
-      <mets:div TYPE="page" ORDER="2" ID="phys_0002">
-        <mets:fptr FILEID="OCR-D-IMG_0002"/>
-      </mets:div>
-      <mets:div TYPE="page" ORDER="3" ID="phys_0003">
-        <mets:fptr FILEID="OCR-D-IMG_0003"/>
-      </mets:div>
-      <mets:div TYPE="page" ORDER="4" ID="phys_0004">
-        <mets:fptr FILEID="OCR-D-IMG_0004"/>
-      </mets:div>
-      <mets:div TYPE="page" ORDER="5" ID="phys_0005">
-        <mets:fptr FILEID="OCR-D-IMG_0005"/>
-      </mets:div>
-      <mets:div TYPE="page" ORDER="6" ID="phys_0006">
-        <mets:fptr FILEID="OCR-D-IMG_0006"/>
-      </mets:div>
       <mets:div TYPE="page" ORDER="7" ID="phys_0007">
         <mets:fptr FILEID="OCR-D-IMG_0007"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0007-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0007"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0007-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0007"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0007.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0007"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="8" ID="phys_0008">
         <mets:fptr FILEID="OCR-D-IMG_0008"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0008-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0008"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0008-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0008"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0008.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0008"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="9" ID="phys_0009">
         <mets:fptr FILEID="OCR-D-IMG_0009"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0009-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0009"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0009-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0009"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0009.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0009"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="10" ID="phys_0010">
         <mets:fptr FILEID="OCR-D-IMG_0010"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0010-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0010"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0010-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0010"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0010.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0010"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="11" ID="phys_0011">
         <mets:fptr FILEID="OCR-D-IMG_0011"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0011-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0011"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0011-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0011"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0011.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0011"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="12" ID="phys_0012">
         <mets:fptr FILEID="OCR-D-IMG_0012"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0012-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0012"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0012-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0012"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0012.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0012"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="13" ID="phys_0013">
         <mets:fptr FILEID="OCR-D-IMG_0013"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0013-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0013"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0013-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0013"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0013.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0013"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="14" ID="phys_0014">
         <mets:fptr FILEID="OCR-D-IMG_0014"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0014-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0014"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0014-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0014"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0014.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0014"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="15" ID="phys_0015">
         <mets:fptr FILEID="OCR-D-IMG_0015"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0015-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0015"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0015-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0015"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0015.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0015"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="16" ID="phys_0016">
         <mets:fptr FILEID="OCR-D-IMG_0016"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0016-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0016"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0016-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0016"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0016.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0016"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="17" ID="phys_0017">
         <mets:fptr FILEID="OCR-D-IMG_0017"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0017-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0017"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0017-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0017"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0017.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0017"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="18" ID="phys_0018">
         <mets:fptr FILEID="OCR-D-IMG_0018"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0018-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0018"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0018-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0018"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0018.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0018"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="19" ID="phys_0019">
         <mets:fptr FILEID="OCR-D-IMG_0019"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0019-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0019"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0019-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0019"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0019.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0019"/>
       </mets:div>
       <mets:div TYPE="page" ORDER="20" ID="phys_0020">
         <mets:fptr FILEID="OCR-D-IMG_0020"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0020-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN_0020"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0020-IMG"/>
+        <mets:fptr FILEID="OCR-D-IMG-BIN-CROP_0020"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0020.IMG-CLIP"/>
+        <mets:fptr FILEID="OCR-D-SEG-LINE_0020"/>
       </mets:div>
     </mets:div>
   </mets:structMap>

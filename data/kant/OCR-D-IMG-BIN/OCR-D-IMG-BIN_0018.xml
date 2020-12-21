@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pc:PcGts xmlns:pc="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15 http://schema.primaresearch.org/PAGE/gts/pagecontent/2019-07-15/pagecontent.xsd" pcGtsId="OCR-D-IMG-BIN_0018">
+    <pc:Metadata>
+        <pc:Creator>OCR-D/core 2.21.0</pc:Creator>
+        <pc:Created>2020-12-21T20:52:31.049781</pc:Created>
+        <pc:LastChange>2020-12-21T20:52:31.049781</pc:LastChange>
+        <pc:MetadataItem type="processingStep" name="preprocessing/optimization/binarization" value="ocrd-anybaseocr-binarize">
+            <pc:Labels externalModel="ocrd-tool" externalId="parameters">
+                <pc:Label value="0.25" type="bignore"/>
+                <pc:Label value="False" type="nocheck"/>
+                <pc:Label value="False" type="show"/>
+                <pc:Label value="False" type="raw_copy"/>
+                <pc:Label value="False" type="gray"/>
+                <pc:Label value="0" type="debug"/>
+                <pc:Label value="1.0" type="escale"/>
+                <pc:Label value="90" type="hi"/>
+                <pc:Label value="5" type="lo"/>
+                <pc:Label value="80" type="perc"/>
+                <pc:Label value="20" type="range"/>
+                <pc:Label value="0.5" type="threshold"/>
+                <pc:Label value="0.5" type="zoom"/>
+                <pc:Label value="page" type="operation_level"/>
+            </pc:Labels>
+            <pc:Labels externalModel="ocrd-tool" externalId="version">
+                <pc:Label value="1.1.0" type="ocrd-anybaseocr-binarize"/>
+                <pc:Label value="2.21.0" type="ocrd/core"/>
+            </pc:Labels>
+        </pc:MetadataItem>
+    </pc:Metadata>
+    <pc:Page imageFilename="OCR-D-IMG/OCR-D-IMG_0018.tif" imageWidth="1457" imageHeight="2084">
+        <pc:AlternativeImage filename="OCR-D-IMG-BIN/OCR-D-IMG-BIN_0018-IMG.png" comments=",binarized"/>
+    </pc:Page>
+</pc:PcGts>

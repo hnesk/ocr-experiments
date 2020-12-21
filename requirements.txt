@@ -1,2 +1,6 @@
 ocrd
-ocrd-cis
+scikit-image
+numpy
+matplotlib
+ipympl
+widgetsnbextension
